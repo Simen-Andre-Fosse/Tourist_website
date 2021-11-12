@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Toalett Kart</title>
+     <meta charset="utf-8">
+     <link rel="stylesheet" type="text/css" href="css/style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body style="background-color: #8f8f8f;">
+  <!-- navigasjonsbar/header -->
+
+ <div class="navbar" id="navbaren">
+  <a class="hjemknapp" href="index.html">Hjem</a>
+  <a href="page2.html">Toalett-kart</a> 
+  <a href="page4.html">Lekeplasser</a> 
+  <a href="page5.html">Favoritt lekeplass</a> 
+  <a href="page3.html">Attraksjoner</a>
+  <a class="icon" onclick="dropdownMenu()">&#9776;</a>
+ </div>
+     <!-- Div som holder map -->
+     <div class="map-container">
+         <div id="map"></div>
+     </div>
+
+     <!-- Div som inneholder søkefelt -->
+     <div class="search-con">
+        <input id="inputTekst" type="text" placeholder="Hurtigsøk" name="Search">
+        <button type="button" class="button" onclick="hurtigSøk()"> &#128269;</button>
+     </div>
+   
+     <!--div som holder på avansert søk og liste -->
+    <div class="listAndAdvanced">
+
+     <!---Avansert søk inputs og search felt -->
+
+     <div class="advanced-holder">
+      <form id="toilet-search-form">
+
+          <h3>Kriterie/Avansert søk</h3>
+          <p>Kjønn:</p>
+           <input id="HerreCheck" type="checkbox" name="Herre" value="Mann">Herre
+
+           <input id="kvinneCheck" type="checkbox" name="Kvinne" value="Kvinne">Kvinne<br>
+
+           <p>Rullestol tilgang:</p>
+          <input id="rullestolCheck" type="checkbox" name="rullestol" value="rullestol">Ja<br>
+   
+           <p>Åpen nå:</p>
+           <input id="apenCheck" type="checkbox" name="Check" value="Ja">Ja<br>
+
+           <p>Åpen klokkeslett:</p>
+           <input id="apenKlokkeslettCheck" type="text" name="klokkeslett" placeholder="Klokkeslett 00:00" maxlength="5">
+
+           <p>Har stellerom:</p>
+           <input id="stelleromCheck" type="checkbox" name="Check2" value="Ja">Ja<br>
+
+           <p>Gratis:</p>
+           <input id="gratisCheck" type="checkbox" name="check3" value="Ja">Ja<br>
+
+           <p>Maks pris:</p>
+           <input id="maksprisCheck" type="number" name="makspris" placeholder="makspris" value="00">
+
+       </form>
+     </div>
+      <!-- Div som holder på en liste som blir laget i javascript -->
+     <div class="list-holder"><ul id="myList"></ul></div>
+
+    </div>
+
+    
+
+     <script async defer
+     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASmzngj_bz5xBaOiU8BvfDl010HgXwsdw&callback=mapLoad">
+     </script>
+     <script src="script/myscript.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <meta charset="utf-8">
+     <link rel="stylesheet" type="text/css" href="css/style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="script/scriptNoXHR.js"></script>
+  </head>
+
+  <body onload="createSelect()">
+  <!-- navigasjonsbar/header -->
+
+ <div class="navbar" id="navbaren">
+  <a class="hjemknapp" href="index.html">Hjem</a>
+  <a href="page2.html">Toalett-kart</a> 
+  <a href="page4.html">Lekeplasser</a> 
+  <a href="page5.html">Favoritt lekeplass</a> 
+  <a href="page3.html">Attraksjoner</a>
+  <a class="icon" onclick="dropdownMenu()">&#9776;</a>
+ </div>
+
+<div id="favElement-holder">
+	  <div>
+       <form>
+          <select id="mySelect" onchange="dropDownSelect()"></select>
+       </form>
+    </div>
+    <div class="favElement">
+         <p id="favElementP"></p>
+    </div>
+</div>
+
+     
+
+  </body>
+</html>

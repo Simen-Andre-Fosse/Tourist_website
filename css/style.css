@@ -1,0 +1,228 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+  font-family: sans-serif;
+}
+/* css for navigasjonsbaren */
+.navbar {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  background-color: #606060;
+  min-height: 70px;
+  padding: 0;
+  margin: 0;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+/* Her vil vi endre på alle utenom first child av navbaren.
+den ønsker vi å ha rød hele tiden. */
+.navbar a:not(:first-child){ 
+  text-align: center;
+  vertical-align: middle;
+  line-height: 70px;
+  background-color: #606060;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/* Når bruker holder over en av linkene i navigasjonsbaren, 
+skal det valgte elementet bli rødt. */
+.navbar a:not(:first-child):hover {
+  background-color: #ff0000;
+}
+/*For å style den ene linken for seg selv, ga vi den en egen class */
+.hjemknapp {
+  background-color: #ff0000;
+  text-decoration: none;
+  color: white;
+  padding: 14px 16px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 70px;
+}
+/* klassen icon, er unicoden, som er "dropdown"  symbolet.
+den vil bare vises når skjermen er mindr en 600px */
+.icon {
+  display: none;
+  text-decoration: none;
+  font-size: 25px;
+}
+/*Styling av bildene på index.html*/
+.holder {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+}
+/*Bildene er i column, derfor valgte vi å kalle klassen col.
+klassene som er inni column, kaller vi derfor col-row.*/
+.col-row {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.col-row a{
+  text-decoration: none;
+  color: white;
+  font-size: 5vw;
+  }
+
+.col {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+/*Oppsett for bildene i index.html*/
+.index-bilde {
+  width: 100%;
+  height: 100%;
+  max-height: 600px;
+}
+
+.index-bilde:hover {
+  filter: blur(5px);
+}
+
+/*media query for skjermer mindre enn 600px. siden er nokså responsiv
+fra før, og har derfor ikke flere media queries*/
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {
+    display: none;
+    }
+  .navbar a.icon {
+    float: right;
+    display: block;
+    min-width: 30px;
+    background-color: #ff0000;
+    }
+  .navbar.responsive .icon {
+    position: fixed;
+    align-self: center;
+    right: 0;
+    top: 0;
+    min-width: 30px;
+    }
+  .navbar.responsive {
+    display: flex;
+    flex-direction: column;
+    }
+  .navbar.responsive a {
+    text-align: left;
+    display: flex;
+  }
+}
+
+/* Kart, blir brukt på flere av sidene*/
+.map-container {
+	display: flex;
+	width: 100%;
+	margin: 0 auto;
+}
+
+#map {
+	height: 500px;
+  width: 800px;
+  margin: 0 auto;
+  border: 2px solid white;
+   }
+
+
+
+/* -------page2.html---------------*/
+.search-con {
+	display: flex;
+	justify-content: center;
+	padding-top: 10px;
+	outline: none;
+}
+
+button {
+	padding : 10px;
+	background: #ff0000;
+	font-weight: bold; 
+	cursor: pointer;
+}
+
+.listAndAdvanced {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.list-holder {
+  margin:20px;
+  min-width: 300px;
+  border : 2px solid white;
+  padding : 10px;
+  width: 20%;
+}
+
+.list-holder li {
+  list-style-type: none;
+  line-height: 1.6;
+}
+
+.advanced-holder {
+  margin: 20px;
+	border : 2px solid white;
+	max-width: 500px;
+  min-width: 300px;
+  line-height: 1.6;
+}
+
+/*---------page3.html-------------- */
+.att-holder {
+  display: flex;
+  flex-direction: column;
+  }
+
+.att-rad {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  }
+
+.att-bilde {
+  margin: 10px;
+}
+
+.att-tekst {
+  border:2px solid white;
+  margin: 10px;
+  width:500px;
+  word-wrap:break-word;
+}
+
+.bilde {
+  width: 400px;
+  height: 300px;
+}
+
+/*----------Page4.html------------------*/
+.avstandOgListe {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 80px;
+}
+
+/* ----------page5 --------------------- */
+#favElement-holder {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 60px;
+  flex-direction: column;
+}
+.favElement {
+  margin-top: 40px;
+}

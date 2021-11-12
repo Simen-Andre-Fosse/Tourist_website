@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <meta charset="utf-8">
+     <link rel="stylesheet" type="text/css" href="css/style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="script/lekeplass.js" type="text/javascript"></script>
+  </head>
+
+  <body onload="createList()">
+  
+  <!-- navigasjonsbar/header -->
+ <div class="navbar" id="navbaren">
+  <a class="hjemknapp" href="index.html">Hjem</a>
+  <a href="page2.html">Toalett-kart</a> 
+  <a href="page4.html">Lekeplasser</a> 
+  <a href="page5.html">Favoritt lekeplass</a> 
+  <a href="page3.html">Attraksjoner</a>
+  <a class="icon" onclick="dropdownMenu()">&#9776;</a>
+ </div>
+     <!-- Div som holder map -->
+     <div class="map-container">
+         <div id="map"></div>
+     </div>
+     <!-- Div som holder på en liste som blir laget i javascript -->
+    <div class="avstandOgListe">
+
+        <div class="sok"> 
+     	    <form>
+     	      <h3>Avstand mellom lekeplasser</h3>
+     	      <p>ID til lekeplass</p>
+     	      <input name="Search" id="favSearch1" type="number">
+     	      <p>ID til lekeplass nr2</p>
+     	      <input type="text" name="Search" id="favSearch2">
+     	      <button type="button" onclick="finnAvstand()">Søk</button>
+     	     	<h3>Avstand mellom lekeplassene</h3>
+     	      <p id="kmResultP"></p>
+       	  </form>
+        </div>
+        <div class="list-holder"><ul id="myList12"></ul> </div>
+ </div>
+
+
+
+
+
+     <script async defer
+     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASmzngj_bz5xBaOiU8BvfDl010HgXwsdw&callback=initMap">
+     </script>
+  </body>
+</html>
